@@ -1,314 +1,312 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Adirup Artistic — Designs that speak</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Adirup Artistic — Designs that Speak</title>
 
-  <!-- Tailwind CDN (quick dev) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Alpine.js for small interactivity -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Tailwind CSS CDN (for dev; replace with CLI in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js for animation -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <style>
-    /* small utility to keep hero image subtle */
-    .hero-bg {
-      background-image: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0c6c2f3b6a2c4f3f8f9b84d5a1c9c3f8');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-</head>
-<body class="antialiased text-gray-900 bg-white">
-
-  <!-- HERO -->
- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Adirup Artistic — Designs that speak</title>
-
-  <!-- Tailwind CDN (quick dev) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Alpine.js for small interactivity -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-  <style>
-    /* small utility to keep hero image subtle */
-    .hero-bg {
-      background-image: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0c6c2f3b6a2c4f3f8f9b84d5a1c9c3f8');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
-</head>
-<body class="antialiased text-gray-900 bg-white">
-
-  <!-- HERO Section with Fade-In Red Animation -->
-<section class="relative flex flex-col items-center justify-center h-screen text-center overflow-hidden">
-  <!-- Background Image + Black Overlay -->
-  <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-  </div>
-
-  <!-- Content -->
-  <div class="relative z-10 px-6">
-    <h1 class="text-4xl md:text-6xl font-serif mb-6 text-white">We design & solve :</h1>
-    <div class="text-2xl md:text-3xl font-semibold text-white" x-data="problemLoop()">
-      <span x-text="currentProblem" 
-            class="inline-block transition-all duration-1000"
-            :class="{'text-red-900': highlight}"></span>
-    </div>
-    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
-      your design pain points & transform your brand
-    </p>
-  </div>
-</section>
-
-<script>
-function problemLoop() {
-  return {
-    problems: [
-      "Inconsistent Branding",
-      "Confusing Packaging",
-      "Dull Brochures",
-      "No Visual Identity",
-      "Designs That Don’t Convert",
-      "Unclear Brand Voice"
-    ],
-    currentIndex: 0,
-    currentProblem: "",
-    highlight: false,
-    init() {
-      this.animateNext();
-    },
-    animateNext() {
-      this.currentProblem = this.problems[this.currentIndex];
-      this.highlight = false;
-      
-      // fade in
-      setTimeout(() => { this.highlight = true; }, 1500);
-    
-      // next problem after 3s
-      setTimeout(() => {
-        this.currentIndex = (this.currentIndex + 1) % this.problems.length;
-        this.animateNext();
-      }, 2000);
-    }
-  }
-}
-</script>
-
-  <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
-
-    <!-- ABOUT -->
-    <section id="about" class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-2xl font-semibold">About</h2>
-        <p class="mt-4 text-gray-700">Adirup Artistic is a boutique design studio focused on memorable brand identity, premium packaging and clean, effective print & social design. We create visuals that communicate clearly and convert.</p>
-      </div>
-      <div class="bg-gray-50 rounded-lg p-6">
-        <h3 class="font-medium">Studio Vibe</h3>
-        <p class="mt-3 text-sm text-gray-600">Minimal, bold, and editorial — crafted for startups and boutique brands who value clarity and personality.</p>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <h2 class="text-2xl font-semibold">Services</h2>
-      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-5 border rounded-lg">
-          <div class="text-xl font-semibold">Branding & Identity</div>
-          <p class="mt-2 text-sm text-gray-600">Logo, brand systems, and visual language.</p>
-        </div>
-
-        <div class="p-5 border rounded-lg">
-          <div class="text-xl font-semibold">Packaging Design</div>
-          <p class="mt-2 text-sm text-gray-600">Concept to dieline-ready artwork.</p>
-        </div>
-
-        <div class="p-5 border rounded-lg">
-          <div class="text-xl font-semibold">Brochure & Print</div>
-          <p class="mt-2 text-sm text-gray-600">Brochures, catalogs, and collateral.</p>
-        </div>
-
-        <div class="p-5 border rounded-lg">
-          <div class="text-xl font-semibold">Social Media Creatives</div>
-          <p class="mt-2 text-sm text-gray-600">High-engagement post & story visuals.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORK SHOWCASE -->
-    <section id="work">
-      <h2 class="text-2xl font-semibold">Work Showcase</h2>
-      <p class="mt-2 text-sm text-gray-600">Placeholder mockups — swap these with your real files anytime.</p>
-
-     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/ai forge logo.png" alt="Brand Identity"
-             class="w-full h-full object-cover">
-    </div>
-
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/Mockup.jpg" alt="Description of Project 2"
-             class="w-full h-full object-cover">
-    </div>
-
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/Leaflet.jpg" alt="Description of Project 3"
-             class="w-full h-full object-cover">
-    </div>
-
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/Packaging.jpg" alt="Description of Project 4"
-             class="w-full h-full object-cover">
-    </div>
-
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/V_Card.jpg" alt="Description of Project 5"
-             class="w-full h-full object-cover">
-    </div>
-
-    <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
-        <img src="img/Brochure.jpg" alt="Description of Project 6"
-             class="w-full h-full object-cover">
-    </div>
-</div>
-
-      <div class="mt-5">
-        <a class="text-sm underline" href="#">View full portfolio (placeholder)</a>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="grid lg:grid-cols-2 gap-8 items-start">
-      <div>
-        <h2 class="text-2xl font-semibold">Let’s Work Together</h2>
-        <p class="mt-3 text-gray-700">Tell us about your project — we’ll get back within 24 hours.</p>
-
-        <div class="mt-6">
-          <!-- Alpine component for form state -->
-          <form x-data="contactForm()" @submit.prevent="submit" class="space-y-4 bg-white p-6 rounded-lg shadow">
-            <div>
-              <label class="text-sm font-medium">Name</label>
-              <input x-model="form.name" type="text" required class="mt-1 w-full border rounded px-3 py-2" placeholder="Your name" />
-            </div>
-
-            <div>
-              <label class="text-sm font-medium">Email</label>
-              <input x-model="form.email" type="email" required class="mt-1 w-full border rounded px-3 py-2" placeholder="you@domain.com" />
-            </div>
-
-            <div>
-              <label class="text-sm font-medium">Project Type</label>
-              <select x-model="form.projectType" class="mt-1 w-full border rounded px-3 py-2">
-                <option>Branding / Identity</option>
-                <option>Packaging</option>
-                <option>Brochure / Print</option>
-                <option>Social Media</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="text-sm font-medium">Message</label>
-              <textarea x-model="form.message" rows="4" class="mt-1 w-full border rounded px-3 py-2" placeholder="Brief project description..."></textarea>
-            </div>
-
-            <div class="flex items-center gap-3">
-              <button type="submit" :disabled="loading" class="bg-black text-white px-4 py-2 rounded hover:opacity-90">
-                <span x-show="!loading">Send Inquiry</span>
-                <span x-show="loading">Sending…</span>
-              </button>
-
-              <div x-show="success" class="text-sm text-green-600">Thanks — we got it. We'll reply within 24 hours.</div>
-              <div x-show="error" class="text-sm text-red-600">Oops — something went wrong. Try again.</div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- RIGHT: Quick contact + socials -->
-      <div class="space-y-4">
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="font-medium">Connect Directly</h3>
-          <p class="mt-2 text-sm text-gray-600">Quick links — replace these with your real profiles later.</p>
-
-          <div class="mt-4 flex items-center gap-3">
-            <!-- Email -->
-            <a class="flex items-center gap-2 px-3 py-2 border rounded hover:bg-gray-100" href="mailto:adi.rupartistic78@gmail.com">
-              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 8.5l9 6 9-6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              <span class="text-sm">Email</span>
-            </a>
-
-            <!-- WhatsApp -->
-            <a class="flex items-center gap-2 px-3 py-2 border rounded hover:bg-gray-100" href="https://wa.me/9405151710" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5A9.5 9.5 0 1 1 11.5 2 9.5 9.5 0 0 1 21 11.5z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 12.5v3a1 1 0 0 1-1.1 1 11.6 11.6 0 0 1-5-.9L14 15l-.9.2a6 6 0 0 1-3-3L9 10l-.5-.5A11.6 11.6 0 0 1 8 4.1 1 1 0 0 1 9 3h3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-sm">WhatsApp</span>
-            </a>
-          </div>
-
-          <div class="mt-4 flex items-center gap-3">
-            <!-- LinkedIn -->
-            <a class="flex items-center gap-2 px-3 py-2 border rounded hover:bg-gray-100" href="https://www.linkedin.com/company/109682230/admin/dashboard/" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="18" rx="2" stroke-width="1.5"/><path d="M6 9v9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 9v9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 9v9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-sm">LinkedIn</span>
-            </a>
-
-            <!-- Instagram -->
-            <a class="flex items-center gap-2 px-3 py-2 border rounded hover:bg-gray-100" href="https://www.instagram.com/adi.rupartistic/" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="4" stroke-width="1.5"/><path d="M8 11.5a4 4 0 0 1 8 0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span class="text-sm">Instagram</span>
-            </a>
-          </div>
-
-        </div>
-
-        <div class="text-xs text-gray-500">
-          © 2025 Adirup Artistic · All Rights Reserved
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- small script: Alpine component -->
-  <script>
-    function contactForm(){
-      return {
-        form: { name: '', email: '', projectType: 'Branding / Identity', message: '' },
-        loading: false,
-        success: false,
-        error: false,
-        async submit(){
-          this.loading = true;
-          this.success = false;
-          this.error = false;
-          try {
-            const res = await fetch('/api/submit', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(this.form)
-            });
-            if (res.ok) {
-              this.success = true;
-              this.form = { name: '', email: '', projectType: 'Branding / Identity', message: '' };
-            } else {
-              this.error = true;
-            }
-          } catch (e) {
-            this.error = true;
-          } finally {
-            this.loading = false;
-            setTimeout(()=>{ this.success = false; }, 6000);
-          }
-        }
+    <style>
+      .hero-bg {
+        background-image: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.35)
+          ),
+          url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
       }
-    }
-  </script>
+    </style>
+  </head>
 
-</body>
+  <body class="antialiased text-gray-900 bg-white">
+    <!-- HERO Section -->
+    <section
+      class="relative flex flex-col items-center justify-center h-screen text-center overflow-hidden"
+    >
+      <!-- Background Image + Overlay -->
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1400&auto=format&fit=crop"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 px-6">
+        <h1 class="text-4xl md:text-6xl font-serif mb-6 text-white">
+          We design & solve :
+        </h1>
+        <div
+          class="text-2xl md:text-3xl font-semibold text-white"
+          x-data="problemLoop()"
+        >
+          <span
+            x-text="currentProblem"
+            class="inline-block transition-opacity duration-1000"
+            :style="`opacity:${opacity}`"
+            :class="{'text-red-600': highlight}"
+          ></span>
+        </div>
+        <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
+          your design pain points & transform your brand
+        </p>
+      </div>
+    </section>
+
+    <script>
+      function problemLoop() {
+        return {
+          problems: [
+            "Inconsistent Branding",
+            "Confusing Packaging",
+            "Dull Brochures",
+            "No Visual Identity",
+            "Designs That Don’t Convert",
+            "Unclear Brand Voice",
+          ],
+          currentIndex: 0,
+          currentProblem: "",
+          opacity: 0,
+          highlight: false,
+          init() {
+            this.fadeCycle();
+          },
+          fadeCycle() {
+            this.currentProblem = this.problems[this.currentIndex];
+            this.opacity = 0;
+            this.highlight = true;
+
+            setTimeout(() => (this.opacity = 1), 100); // fade in
+            setTimeout(() => (this.opacity = 0), 1800); // fade out
+            setTimeout(() => {
+              this.currentIndex =
+                (this.currentIndex + 1) % this.problems.length;
+              this.fadeCycle();
+            }, 2200);
+          },
+        };
+      }
+    </script>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+      <!-- ABOUT -->
+      <section id="about" class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl font-semibold">About</h2>
+          <p class="mt-4 text-gray-700">
+            Adirup Artistic is a boutique design studio focused on memorable
+            brand identity, premium packaging and clean, effective print & social
+            design. We create visuals that communicate clearly and convert.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="font-medium">Studio Vibe</h3>
+          <p class="mt-3 text-sm text-gray-600">
+            Minimal, bold, and editorial — crafted for startups and boutique
+            brands who value clarity and personality.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h2 class="text-2xl font-semibold">Services</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-5 border rounded-lg">
+            <div class="text-xl font-semibold">Branding & Identity</div>
+            <p class="mt-2 text-sm text-gray-600">
+              Logo, brand systems, and visual language.
+            </p>
+          </div>
+          <div class="p-5 border rounded-lg">
+            <div class="text-xl font-semibold">Packaging Design</div>
+            <p class="mt-2 text-sm text-gray-600">
+              Concept to dieline-ready artwork.
+            </p>
+          </div>
+          <div class="p-5 border rounded-lg">
+            <div class="text-xl font-semibold">Brochure & Print</div>
+            <p class="mt-2 text-sm text-gray-600">
+              Brochures, catalogs, and collateral.
+            </p>
+          </div>
+          <div class="p-5 border rounded-lg">
+            <div class="text-xl font-semibold">Social Media Creatives</div>
+            <p class="mt-2 text-sm text-gray-600">
+              High-engagement post & story visuals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK SHOWCASE -->
+      <section id="work">
+        <h2 class="text-2xl font-semibold">Work Showcase</h2>
+        <p class="mt-2 text-sm text-gray-600">
+          Placeholder mockups — swap these with your real files anytime.
+        </p>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/ai forge logo.png"
+              alt="Brand Identity"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/Mockup.jpg"
+              alt="Mockup"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/Leaflet.jpg"
+              alt="Leaflet Design"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/Packaging.jpg"
+              alt="Packaging"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/V_Card.jpg"
+              alt="Visiting Card"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="h-48 bg-gray-100 rounded-lg overflow-hidden">
+            <img
+              src="img/Brochure.jpg"
+              alt="Brochure Design"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <a class="text-sm underline" href="#">View full portfolio</a>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-2xl font-semibold">Let’s Work Together</h2>
+          <p class="mt-3 text-gray-700">
+            Tell us about your project — we’ll get back within 24 hours.
+          </p>
+
+          <form id="contactForm" class="mt-6 space-y-4">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              required
+              class="w-full p-2 rounded bg-gray-800 text-white"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email"
+              required
+              class="w-full p-2 rounded bg-gray-800 text-white"
+            />
+            <textarea
+              id="message"
+              placeholder="Your Message"
+              rows="3"
+              class="w-full p-2 rounded bg-gray-800 text-white"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white"
+            >
+              Send
+            </button>
+          </form>
+          <p id="statusMsg" class="text-sm mt-2 text-gray-800"></p>
+        </div>
+
+        <div class="flex flex-col space-y-3">
+          <h3 class="text-xl font-semibold">Contact</h3>
+          <a href="mailto:hello@adirupartistic.com" class="text-blue-600"
+            >hello@adirupartistic.com</a
+          >
+          <a href="https://wa.me/919999999999" target="_blank" class="text-green-600"
+            >WhatsApp Us</a
+          >
+          <div class="flex space-x-4 text-2xl mt-3">
+            <a href="#" class="hover:text-blue-600"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-pink-500"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const status = document.getElementById("statusMsg");
+          status.textContent = "Sending...";
+
+          const data = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          try {
+            const res = await fetch("/api/submit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+            if (result.success) {
+              status.textContent = "✅ Message sent successfully!";
+              e.target.reset();
+            } else {
+              status.textContent =
+                "❌ Error: " + (result.error || "Something went wrong.");
+            }
+          } catch (err) {
+            status.textContent = "❌ Failed to send. Please try again later.";
+          }
+        });
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

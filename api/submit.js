@@ -1,27 +1,40 @@
-import { sql } from '@vercel/postgres';
+// api/submit.js
+import { Pool } from "pg";
+
+const pool = new Pool({
+  connectionString: process.env.NEON_DATABASE_URL,
+  ssl: { rejectUnauthorized: false },
+});
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   try {
-    const { name, email, projectType, message } = req.body;
-    console.log('Received form data:', req.body);
+    const { name, email, message } = await req.json();
 
-    if (!name || !email) {
-      return res.status(400).json({ error: 'Name and email are required' });
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const result = await sql`
-      INSERT INTO leads (name, email, project_type, message)
-      VALUES (${name}, ${email}, ${projectType}, ${message});
-    `;
-    console.log('Insert success:', result);
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS leads (
+        id SERIAL PRIMARY KEY,
+        name TEXT,
+        email TEXT,
+        message TEXT,
+        created_at TIMESTAMP DEFAULT NOW()
+      )
+    `);
+
+    await pool.query("INSERT INTO leads (name, email, message) VALUES ($1, $2, $3)", [
+      name,
+      email,
+      message,
+    ]);
 
     return res.status(200).json({ success: true });
   } catch (err) {
-    console.error('❌ Error inserting lead:', err.message);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error("Error inserting data:", err);
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 }
