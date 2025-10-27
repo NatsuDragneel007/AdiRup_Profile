@@ -23,7 +23,7 @@
     "tailwindcss": "^4.1.16"
   },
   "dependencies": {
-    "@vercel/postgres": "^0.10.0"
+    "@vercel/postgres": "^0.10.0",
+    "pg": "^8.16.3"
   }
 }
-
